@@ -5,4 +5,4 @@ down:
 	docker compose down
 
 occ:
-	docker exec nextcloud-app php occ $(ARGS)
+	docker exec -it --user www-data nextcloud-app php occ $(ARGS)
