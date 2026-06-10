@@ -29,8 +29,6 @@ services:
   app:
     image: nextcloud
     container_name: nextcloud-app
-    ports:
-      - ${LOCAL_APP_PORT}:80/tcp
     depends_on:
       - redis
       - db
@@ -40,6 +38,8 @@ services:
     networks:
       - frontend
       - backend
+    ports:
+      - 0.0.0.0:${LOCAL_APP_PORT}:80/tcp
     environment:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
