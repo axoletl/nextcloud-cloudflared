@@ -1,4 +1,5 @@
-FROM nextcloud:apache
+FROM nextcloud:latest
 
-RUN apt update \
-  apt install ffmpeg imagemagick ghostscript
+RUN apt-get update && \
+    apt-get install --yes --no-install-recommends ffmpeg && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*

@@ -47,8 +47,6 @@ services:
       - MYSQL_HOST=db
       - PHP_UPLOAD_LIMIT=4096
       - APACHE_BODY_LIMIT=0
-    command: sh -c "apt update &&
-      apt -y install ffmpeg imagemagick ghostscript"
     restart: 'unless-stopped'
 
   cloudflared:
