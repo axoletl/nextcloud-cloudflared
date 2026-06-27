@@ -47,7 +47,8 @@ services:
       - MYSQL_HOST=db
       - PHP_UPLOAD_LIMIT=4096
       - APACHE_BODY_LIMIT=0
-      - NEXTCLOUD_ADDITIONAL_PHP_EXTENSIONS=imagick libva-utils libva-vdpau-driver libva-intel-driver intel-media-driver mesa-va-gallium
+    command: sh -c "apt update &&
+      apt install ffmpeg imagemagick ghostscript"
     restart: 'unless-stopped'
 
   cloudflared:
