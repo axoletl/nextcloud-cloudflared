@@ -27,8 +27,11 @@ services:
     restart: 'unless-stopped'
 
   app:
-    image: nextcloud
     container_name: nextcloud-app
+    # image: nextcloud
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - redis
       - db
