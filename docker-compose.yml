@@ -45,6 +45,9 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_HOST=db
+      - PHP_UPLOAD_LIMIT=4096
+      - APACHE_BODY_LIMIT=0
+      - NEXTCLOUD_ADDITIONAL_PHP_EXTENSIONS=imagick libva-utils libva-vdpau-driver libva-intel-driver intel-media-driver mesa-va-gallium
     restart: 'unless-stopped'
 
   cloudflared:

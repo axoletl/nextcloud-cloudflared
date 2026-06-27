@@ -35,3 +35,6 @@ make occ ARGS="config:system:set enabledPreviewProviders 11 --value='OC\Preview\
 make exec CMD="apt update"
 make exec CMD="apt install ffmpeg imagemagick ghostscript"
 ```
+
+## TODO
+- Move post-install into script or Dockerfile
