@@ -31,10 +31,7 @@ make occ ARGS="config:system:set enabledPreviewProviders 8 --value='OC\Preview\M
 make occ ARGS="config:system:set enabledPreviewProviders 9 --value='OC\Preview\TXT'"
 make occ ARGS="config:system:set enabledPreviewProviders 10 --value='OC\Preview\MarkDown'"
 make occ ARGS="config:system:set enabledPreviewProviders 11 --value='OC\Preview\PDF'"
-
-make exec CMD="apt update"
-make exec CMD="apt install ffmpeg imagemagick ghostscript"
 ```
 
 ## TODO
-- Move post-install into script or Dockerfile
+- Move post-install into script, envs or Dockerfile
