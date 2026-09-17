@@ -38,6 +38,7 @@ services:
     volumes:
       - nextcloud:/var/www/html
       - ${NEXTCLOUD_APP_DATA_DIR}:/var/www/html/data
+      - ./config/php.ini:/usr/local/etc/php/conf.d/zzz-custom.ini:ro
     networks:
       - frontend
       - backend
