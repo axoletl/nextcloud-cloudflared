@@ -52,6 +52,8 @@ services:
       - MYSQL_HOST=db
       - PHP_UPLOAD_LIMIT=4096
       - APACHE_BODY_LIMIT=0
+      - NC_UID=1000
+      - NC_GID=1000
     restart: 'unless-stopped'
 
   cloudflared:
